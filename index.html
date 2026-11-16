@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin Ortiz - Data Science Portfolio</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --accent2: #3fb950;
+            --accent3: #d2a8ff;
+            --tag-bg: #1f2937;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            border-bottom: 1px solid var(--border);
+        }
+        .hero h1 { font-size: 2.2em; margin-bottom: 8px; }
+        .hero .subtitle {
+            color: var(--accent);
+            font-size: 1.1em;
+            margin-bottom: 12px;
+        }
+        .hero p { color: var(--text-muted); max-width: 620px; margin: 0 auto 20px; font-size: 0.95em; }
+        .links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9em;
+            padding: 6px 14px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            transition: border-color 0.2s;
+        }
+        .links a:hover { border-color: var(--accent); }
+
+        /* Sections */
+        section { padding: 40px 0; border-bottom: 1px solid var(--border); }
+        section:last-child { border-bottom: none; }
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h2 .icon { font-size: 0.8em; }
+
+        /* Project cards */
+        .projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            transition: border-color 0.2s;
+        }
+        .card:hover { border-color: var(--accent); }
+        .card h3 { font-size: 1.05em; margin-bottom: 8px; }
+        .card h3 a { color: var(--text); text-decoration: none; }
+        .card h3 a:hover { color: var(--accent); }
+        .card p { color: var(--text-muted); font-size: 0.85em; margin-bottom: 12px; }
+        .card .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .tag {
+            background: var(--tag-bg);
+            color: var(--accent);
+            font-size: 0.75em;
+            padding: 3px 10px;
+            border-radius: 12px;
+        }
+        .tag.python { color: #3572A5; }
+        .tag.ml { color: var(--accent3); }
+        .tag.web { color: var(--accent2); }
+        .featured { border-left: 3px solid var(--accent); }
+
+        /* Skills */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+        .skill-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .skill-card h4 { font-size: 0.9em; margin-bottom: 8px; color: var(--accent); }
+        .skill-card p { font-size: 0.85em; color: var(--text-muted); }
+
+        /* Certs */
+        .certs-list { list-style: none; }
+        .certs-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9em;
+        }
+        .certs-list li:last-child { border-bottom: none; }
+        .cert-issuer { color: var(--text-muted); font-size: 0.85em; }
+        .cert-date { color: var(--accent); font-size: 0.8em; }
+
+        /* Education */
+        .edu-item { margin-bottom: 20px; }
+        .edu-item h4 { font-size: 1em; }
+        .edu-item .institution { color: var(--accent); font-size: 0.9em; }
+        .edu-item .period { color: var(--text-muted); font-size: 0.85em; }
+        .edu-item p { color: var(--text-muted); font-size: 0.85em; margin-top: 4px; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-muted);
+            font-size: 0.85em;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.6em; }
+            .projects { grid-template-columns: 1fr; }
+            .skills-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="hero">
+        <h1>Benjamin Ortiz Castro</h1>
+        <div class="subtitle">Data Science &amp; Analytics | Machine Learning</div>
+        <p>Estudiante de Analista Programador en INACAP con Diplomado en Python &amp; Data Science.
+           Certificado en Analisis de Datos por Talento Digital para Chile y Google.
+           4to lugar en Hackathon ML de prediccion de colisiones de basura espacial.</p>
+        <div class="links">
+            <a href="https://github.com/benjaminortizc" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/benjaminortizcastro" target="_blank">LinkedIn</a>
+            <a href="mailto:doudouyea@gmail.com">Email</a>
+        </div>
+    </div>
+
+    <!-- Proyectos Destacados -->
+    <section>
+        <h2><span class="icon">&#128187;</span> Proyectos Destacados</h2>
+        <div class="projects">
+            <div class="card featured">
+                <h3><a href="https://github.com/benjaminortizc/satellite-collision-api" target="_blank">Satellite Collision API</a></h3>
+                <p>API de prediccion de colisiones de basura espacial usando Machine Learning.
+                   Proyecto del hackathon donde obtuve 4to lugar. Modelo predictivo para anticipar
+                   colisiones entre objetos espaciales.</p>
+                <div class="tags">
+                    <span class="tag python">Python</span>
+                    <span class="tag ml">Machine Learning</span>
+                    <span class="tag">API</span>
+                    <span class="tag">FastAPI</span>
+                </div>
+            </div>
+
+            <div class="card featured">
+                <h3><a href="https://github.com/benjaminortizc/spaceapi" target="_blank">Space API</a></h3>
+                <p>API complementaria para el procesamiento y analisis de datos espaciales.
+                   Desarrollo de endpoints para consulta y prediccion de trayectorias de objetos.</p>
+                <div class="tags">
+                    <span class="tag python">Python</span>
+                    <span class="tag">API REST</span>
+                    <span class="tag">Data Processing</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><a href="https://github.com/benjaminortizc/titanic" target="_blank">Titanic - Analisis de Datos</a></h3>
+                <p>Analisis exploratorio y modelo predictivo sobre el clasico dataset del Titanic.
+                   Limpieza de datos, visualizacion y clasificacion de supervivientes.</p>
+                <div class="tags">
+                    <span class="tag python">Python</span>
+                    <span class="tag ml">Scikit-learn</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">EDA</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><a href="https://github.com/benjaminortizc/MatePAES-Web" target="_blank">MatePAES Web</a></h3>
+                <p>Plataforma web educativa para preparacion de la prueba PAES de matematicas.
+                   Desarrollo frontend con enfoque en experiencia de usuario.</p>
+                <div class="tags">
+                    <span class="tag web">HTML</span>
+                    <span class="tag web">CSS</span>
+                    <span class="tag web">JavaScript</span>
+                    <span class="tag">Educacion</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><a href="https://github.com/benjaminortizc/DulcesSuenos" target="_blank">Dulces Suenos</a></h3>
+                <p>Aplicacion web desplegada en Vercel. Desarrollo completo frontend con
+                   diseno responsivo y experiencia de usuario optimizada.</p>
+                <div class="tags">
+                    <span class="tag web">Web App</span>
+                    <span class="tag">Vercel</span>
+                    <span class="tag">Deploy</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><a href="https://github.com/benjaminortizc/api" target="_blank">API Python</a></h3>
+                <p>Desarrollo de API REST con Python para procesamiento y servicio de datos.
+                   Arquitectura backend orientada a microservicios.</p>
+                <div class="tags">
+                    <span class="tag python">Python</span>
+                    <span class="tag">API REST</span>
+                    <span class="tag">Backend</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section>
+        <h2><span class="icon">&#9889;</span> Habilidades Tecnicas</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h4>Lenguajes</h4>
+                <p>Python, SQL, Bash, HTML, CSS, JavaScript</p>
+            </div>
+            <div class="skill-card">
+                <h4>Data Science &amp; ML</h4>
+                <p>Pandas, NumPy, Scikit-learn, Matplotlib, Machine Learning</p>
+            </div>
+            <div class="skill-card">
+                <h4>Visualizacion &amp; BI</h4>
+                <p>Microsoft Power BI, Visualizacion de Datos, Jupyter Notebooks</p>
+            </div>
+            <div class="skill-card">
+                <h4>Herramientas</h4>
+                <p>Git, GitHub, FastAPI, Vercel, Metodologias Agiles</p>
+            </div>
+            <div class="skill-card">
+                <h4>Analisis de Datos</h4>
+                <p>Analisis estadistico, limpieza de datos, modelado predictivo, EDA</p>
+            </div>
+            <div class="skill-card">
+                <h4>Seguridad</h4>
+                <p>ISO 27001, Gestion de riesgos, Lead Auditor certificado</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificaciones -->
+    <section>
+        <h2><span class="icon">&#127942;</span> Certificaciones</h2>
+        <ul class="certs-list">
+            <li>Analisis de Datos - Especialidad <span class="cert-issuer">| Talento Digital para Chile</span> <span class="cert-date">Oct. 2025</span></li>
+            <li>Diplomado en Python and Data Science <span class="cert-issuer">| U. Autonoma de Chile</span> <span class="cert-date">Jun. 2025</span></li>
+            <li>5th Hackathon Innovation Challenge <span class="cert-issuer">| Microsoft &amp; Codigo Facilito</span> <span class="cert-date">Jun. 2025</span></li>
+            <li>Analisis de Datos de Google <span class="cert-issuer">| Google / Coursera</span> <span class="cert-date">2025</span></li>
+            <li>ISO 27001 Lead Auditor <span class="cert-issuer">| Certiprof</span> <span class="cert-date">2025</span></li>
+            <li>Machine Learning with Python <span class="cert-issuer">| FCFM, U. de Chile</span> <span class="cert-date">2024</span></li>
+            <li>Data Science <span class="cert-issuer">| Certificacion profesional</span> <span class="cert-date">2024</span></li>
+            <li>Full Stack Python <span class="cert-issuer">| American Software</span> <span class="cert-date">2024</span></li>
+        </ul>
+    </section>
+
+    <!-- Educacion -->
+    <section>
+        <h2><span class="icon">&#127891;</span> Educacion</h2>
+        <div class="edu-item">
+            <h4>Analista Programador</h4>
+            <div class="institution">INACAP</div>
+            <div class="period">Marzo 2025 - Diciembre 2026 (en curso)</div>
+        </div>
+        <div class="edu-item">
+            <h4>Ing. Civil en Informatica y Telecomunicaciones</h4>
+            <div class="institution">Universidad Diego Portales</div>
+            <div class="period">Marzo 2022 - Diciembre 2024 (2 anos cursados)</div>
+        </div>
+        <div class="edu-item">
+            <h4>Diplomado en Python and Data Science</h4>
+            <div class="institution">Universidad Autonoma de Chile</div>
+            <div class="period">Noviembre 2024 - Mayo 2025</div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>Benjamin Ortiz Castro &copy; 2025 — Abierto a oportunidades en Data Science &amp; Analytics</p>
+</footer>
+
+</body>
+</html>
